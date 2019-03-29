@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Layout implements WebContent {
 
-    //TODO démultiplier par for:each necaissaire.
+    //TODO démultiplier par for:each nécessaire.
     private ArrayList<WebContent> contents = new ArrayList<>();
 
     public void addContents(WebContent content) {
