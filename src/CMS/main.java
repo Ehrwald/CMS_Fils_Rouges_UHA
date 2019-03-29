@@ -9,5 +9,13 @@ public class main {
 
         Paragraph p = new Paragraph("pouet pouet");
         System.out.println(p.getHtml());
+
+        Nav n = new Nav("rien");
+        System.out.println(n.getHtml());
+
+        n.addLink(l);
+        System.out.println(n.getHtml());
+        n.addLink(new Link("blabka", "facebook.com"));
+        System.out.println(n.getHtml());
     }
 }
