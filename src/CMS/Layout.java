@@ -2,7 +2,7 @@ package CMS;
 
 import java.util.ArrayList;
 
-public abstract class Layout implements WebContent {
+public class Layout implements WebContent {
 
     //TODO démultiplier par for:each necaissaire.
     private ArrayList<WebContent> contents = new ArrayList<>();
