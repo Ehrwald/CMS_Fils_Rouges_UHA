@@ -8,6 +8,4 @@ public abstract class Content implements WebContent{
         this.text = text;
     }
 
-
-
 }
