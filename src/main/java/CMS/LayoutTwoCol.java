@@ -8,8 +8,10 @@ public class LayoutTwoCol implements WebContent {
     private ArrayList<WebContent> col1 = new ArrayList<>();
     private ArrayList<WebContent> col2 = new ArrayList<>();
 
-    public void addContents(WebContent content) {
+    public void addContentCol1(WebContent content) {
         this.col1.add(content);
+    }
+    public void addContentsCol(WebContent content) {
         this.col2.add(content);
     }
     //TODO avoir un for: pour nbLayou que nécessaire.
