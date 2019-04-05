@@ -6,10 +6,19 @@
         <servlet-name>CmsIndex</servlet-name>
         <servlet-class>CMS.WEB.CmsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Page</servlet-name>
+        <servlet-class>CMS.WEB.PageServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>CmsIndex</servlet-name>
         <url-pattern>/cmsindex</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Page</servlet-name>
+        <url-pattern>/page</url-pattern>
     </servlet-mapping>
 
 </web-app>

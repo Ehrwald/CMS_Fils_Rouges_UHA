@@ -10,4 +10,5 @@ CMS/Content.class
 CMS/CPage.class
 CMS/Media.class
 CMS/Pages.class
+CMS/WEB/PageServlet.class
 CMS/Paragraph.class
