@@ -3,12 +3,13 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <servlet>
-        <servlet-name>CmsServlet</servlet-name>
-        <servlet-class>WEB.CmsServlet</servlet-class>
-
-        <servlet-mapping>
-            <servlet-name>CmsServlet</servlet-name>
-            <url-pattern>/CmsServlet</url-pattern>
-        </servlet-mapping>
+        <servlet-name>CmsIndex</servlet-name>
+        <servlet-class>CMS.WEB.CmsServlet</servlet-class>
     </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CmsIndex</servlet-name>
+        <url-pattern>/cmsindex</url-pattern>
+    </servlet-mapping>
+
 </web-app>
