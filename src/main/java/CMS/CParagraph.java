@@ -1,9 +1,9 @@
 package CMS;
 
-class Paragraph extends Content{
+public class CParagraph extends Content{
 
 
-    public Paragraph(String text) {
+    public CParagraph(String text) {
         super(text);
     }
 
@@ -12,4 +12,7 @@ class Paragraph extends Content{
     public String getHtml() {
         return "<p>"+this.text+"</p>";
     }
+
+
+
 }

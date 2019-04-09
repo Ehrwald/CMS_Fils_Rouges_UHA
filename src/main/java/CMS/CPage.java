@@ -1,13 +1,21 @@
 package CMS;
 
 public class CPage implements WebContent{
-private Header header;
+    private Header header = new Header("");
+    private LayoutCol body = new LayoutCol();
+    //private WebContent body = new LayoutCol();
 
 
     public void setHeader(Header header) {
         this.header = header;
     }
 
+   public void addInBody(WebContent content) {
+        this.body.addContentToCol(content);
+    }
+    /*public void setBody(WebContent content) {
+        this.body =content;
+    }//*/
     @Override
     public String getHtml() {
         StringBuffer resBuffer = new StringBuffer();
@@ -22,11 +30,9 @@ private Header header;
         resBuffer.append(this.header.getHtml());
 
 
-        resBuffer.append("<body>\n" +
-                "  ...\n" +
-                "  <!-- Le reste du contenu -->\n" +
-                "  ...\n" +
-                "</body>\n" +
+        resBuffer.append("<body>");
+        resBuffer.append(this.body.getHtml());
+        resBuffer.append("</body>\n" +
                 "</html>");
         return resBuffer.toString();
     }

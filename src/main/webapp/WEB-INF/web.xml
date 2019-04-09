@@ -21,4 +21,14 @@
         <url-pattern>/page</url-pattern>
     </servlet-mapping>
 
+
+
+    <servlet>
+        <servlet-name>CPage</servlet-name>
+        <servlet-class>CMS.WEB.CPageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CPage</servlet-name>
+        <url-pattern>/cpage</url-pattern>
+    </servlet-mapping>
 </web-app>

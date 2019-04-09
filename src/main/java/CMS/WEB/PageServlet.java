@@ -25,10 +25,7 @@ public class PageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        if (req.getQueryString() == null)
-            displayForm(resp);
-        else
-            displayPage(req, resp);
+        displayForm(resp);
     }
 @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -36,6 +33,8 @@ public class PageServlet extends HttpServlet {
         contents.addContentCol1(new Header(req.getParameter("titre")));
         resp.getWriter().println(contents.getHtml());
     }
+
+
     private void displayPage(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Map<String, String> params = splitParameters(req.getQueryString());
         Header header = new Header(params.get("titre"));

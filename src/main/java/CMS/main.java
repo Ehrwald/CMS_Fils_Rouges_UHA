@@ -7,7 +7,7 @@ public class main {
         System.out.println(l.getHtml());
 
 
-        Paragraph p = new Paragraph("pouet pouet");
+        CParagraph p = new CParagraph("pouet pouet");
         System.out.println(p.getHtml());
 
         Nav n = new Nav("rien");

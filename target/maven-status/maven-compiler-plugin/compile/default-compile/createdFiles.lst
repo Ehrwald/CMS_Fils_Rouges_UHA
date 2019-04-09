@@ -2,7 +2,10 @@ CMS/WEB/CmsServlet.class
 CMS/WebContent.class
 CMS/Link.class
 CMS/main.class
+CMS/CParagraph.class
+CMS/LayoutCol.class
 CMS/Nav.class
+CMS/WEB/CPageServlet.class
 CMS/LayoutTwoCol.class
 CMS/CFooter.class
 CMS/Header.class
@@ -11,4 +14,3 @@ CMS/CPage.class
 CMS/Media.class
 CMS/Pages.class
 CMS/WEB/PageServlet.class
-CMS/Paragraph.class
