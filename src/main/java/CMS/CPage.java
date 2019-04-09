@@ -1,6 +1,12 @@
 package CMS;
 
 public class CPage implements WebContent{
+private Header header;
+
+
+    public void setHeader(Header header) {
+        this.header = header;
+    }
 
     @Override
     public String getHtml() {
@@ -12,8 +18,11 @@ public class CPage implements WebContent{
                 "  <title>Titre de la CPage</title>\n" +
                 "  <link rel=\"stylesheet\" href=\"style.css\">\n" +
                 "  <script src=\"script.js\"></script>\n" +
-                "</head>\n" +
-                "<body>\n" +
+                "</head>\n");
+        resBuffer.append(this.header.getHtml());
+
+
+        resBuffer.append("<body>\n" +
                 "  ...\n" +
                 "  <!-- Le reste du contenu -->\n" +
                 "  ...\n" +
