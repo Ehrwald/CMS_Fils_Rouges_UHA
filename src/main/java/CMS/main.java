@@ -29,7 +29,10 @@ public class main {
         CFooter cFooter = new CFooter("aurevoir");
         System.out.println(cFooter.getHtml());
 
-        WebSite webSite = new WebSite(new CPage());
+        WebSite webSite = new WebSite();
+        System.out.println(webSite.getHtml());
+        webSite.addPages(new CPage());
+        System.out.println(webSite.getHtml());
 
     }
 }

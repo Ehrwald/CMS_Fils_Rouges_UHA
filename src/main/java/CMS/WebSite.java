@@ -6,12 +6,6 @@ import java.util.List;
 public class WebSite implements WebContent {
 private List<CPage> pages = new ArrayList<>();
 
-    public WebSite(List<CPage> pages) {
-        this.pages = pages ;
-    }
-
-
-
     public void addPages(CPage CPages){
     this.pages.add(CPages);
 }
