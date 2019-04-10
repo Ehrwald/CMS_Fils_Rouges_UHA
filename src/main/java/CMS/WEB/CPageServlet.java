@@ -30,7 +30,8 @@ public class CPageServlet extends HttpServlet {
         model.setHeader(new Header(req.getParameter("titre")));
         model.addInBody(new CParagraph(req.getParameter("textarea")) );
         model.setFooter(new CFooter(req.getParameter("footer")));
-
+        model.addNavPage(new CPage());
+//TODO donner un nom à ces pages? Creer un bouton pour en générer?
     resp.getWriter().println(model.getHtml());
     }
 

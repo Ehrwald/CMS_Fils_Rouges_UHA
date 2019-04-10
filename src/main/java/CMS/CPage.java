@@ -1,11 +1,15 @@
 package CMS;
 
+import java.util.ArrayList;
+
 public class CPage implements WebContent{
     private Header header = new Header("");
     private CFooter footer = new CFooter("");
     private LayoutCol body = new LayoutCol();
+    private WebSite webSite = new WebSite();
     //private WebContent body = new LayoutCol();
 
+//TODO Implementer le NAV de CPages en tete de page.
 
     public void setHeader(Header header) {
         this.header = header;
@@ -14,13 +18,16 @@ public class CPage implements WebContent{
         this.footer = footer;
     }
 
-
     /**
      * ajoute un layout dans le body
      * @param content ajoute xElements
      */
    public void addInBody(WebContent content) {
         this.body.addContentToCol(content);
+    }
+
+    public void addNavPage(CPage CPages) {
+        this.webSite.addPages(CPages);
     }
 
     /*public void setBody(WebContent content) {
@@ -38,6 +45,7 @@ public class CPage implements WebContent{
                 "  <link rel=\"stylesheet\" href=\"style.css\">\n" +
                 "  <script src=\"script.js\"></script>\n" +
                 "</head>\n");
+        resBuffer.append(this.webSite.getHtml());
         resBuffer.append(this.header.getHtml());
         resBuffer.append("<body>");
         resBuffer.append(this.body.getHtml());
