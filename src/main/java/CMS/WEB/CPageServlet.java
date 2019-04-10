@@ -28,7 +28,8 @@ public class CPageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         model.setHeader(new Header(req.getParameter("titre")));
-        model.addInBody(new CParagraph(req.getParameter("text")) );
+        model.addInBody(new CParagraph(req.getParameter("textarea")) );
+        model.setFooter(new CFooter(req.getParameter("footer")));
 
     resp.getWriter().println(model.getHtml());
     }
@@ -41,6 +42,7 @@ public class CPageServlet extends HttpServlet {
                 "<b>Paragraphe :</b> <input name=\"text\"/><br/><br/>" +
                 "<b>Paragraph </b> <br/>" +
                 "<textarea name=\"textarea\"></textarea><br/>" +
+                "<b>Footer:</b> <input name=\"footer\"/><br/><br/>" +
                 "<input type=\"submit\"/>" +
                 "</form>";
         resp.getWriter().println(form);

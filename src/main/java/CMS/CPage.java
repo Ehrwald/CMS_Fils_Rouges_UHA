@@ -2,6 +2,7 @@ package CMS;
 
 public class CPage implements WebContent{
     private Header header = new Header("");
+    private CFooter footer = new CFooter("");
     private LayoutCol body = new LayoutCol();
     //private WebContent body = new LayoutCol();
 
@@ -9,13 +10,23 @@ public class CPage implements WebContent{
     public void setHeader(Header header) {
         this.header = header;
     }
+    public void setFooter(CFooter footer) {
+        this.footer = footer;
+    }
 
+
+    /**
+     * ajoute un layout dans le body
+     * @param content ajoute xElements
+     */
    public void addInBody(WebContent content) {
         this.body.addContentToCol(content);
     }
+
     /*public void setBody(WebContent content) {
         this.body =content;
     }//*/
+
     @Override
     public String getHtml() {
         StringBuffer resBuffer = new StringBuffer();
@@ -28,12 +39,11 @@ public class CPage implements WebContent{
                 "  <script src=\"script.js\"></script>\n" +
                 "</head>\n");
         resBuffer.append(this.header.getHtml());
-
-
         resBuffer.append("<body>");
         resBuffer.append(this.body.getHtml());
-        resBuffer.append("</body>\n" +
-                "</html>");
+        resBuffer.append("</body>\n");
+        resBuffer.append(this.footer.getHtml());
+        resBuffer.append("</html>");
         return resBuffer.toString();
     }
     //TODO CPage à finir avec l'intégration de la servlet.
