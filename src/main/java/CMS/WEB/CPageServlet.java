@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class CPageServlet extends HttpServlet {
     CPage model = new CPage();
@@ -25,7 +23,7 @@ public class CPageServlet extends HttpServlet {
         //resp.setContentType("text/html");
         //resp.setCharacterEncoding("UTF-8");
         this.getServletContext().getRequestDispatcher( "/WEB-INF/vue.jsp" ).forward( req, resp );
-        displayForm(resp);
+       // displayForm(resp);
 
 
     }
@@ -33,7 +31,7 @@ public class CPageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         model.setHeader(new Header(req.getParameter("titre")));
-        model.addInBody(new CParagraph(req.getParameter("textarea")) );
+        model.addInBody(new CParagraph(req.getParameter("textP")) );
         model.setFooter(new CFooter(req.getParameter("footer")));
         model.addNavPage(new CPage());
 //TODO donner un nom à ces pages? Creer un bouton pour en générer?
@@ -42,7 +40,7 @@ public class CPageServlet extends HttpServlet {
 
 
     //TODO voir jsp pour générer un form
-    private void displayForm(HttpServletResponse resp) throws IOException {
+  /*  private void displayForm(HttpServletResponse resp) throws IOException {
         String form = "<form action=\"cpage\" method='POST'>" +
                 "<b>Nom du titre :</b> <input name=\"titre\"/><br/>" +
                 "<b>Paragraphe :</b> <input name=\"text\"/><br/><br/>" +
@@ -52,5 +50,5 @@ public class CPageServlet extends HttpServlet {
                 "<input type=\"submit\"/>" +
                 "</form>";
         resp.getWriter().println(form);
-    }
+    } */
 }

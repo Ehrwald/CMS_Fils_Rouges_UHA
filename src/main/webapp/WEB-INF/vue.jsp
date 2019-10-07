@@ -10,6 +10,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css">
     <title>vue</title>
 </head>
 
@@ -24,7 +25,7 @@
 
     <%-- pas encore trouver le textarea
     <label>Paragraph </label>
-    <textarea type="textearea" name="textarea"></textarea> --%>
+    <input type="textearea" name="textarea"></textarea> --%>
 
     <label for="footer">Footer:</label>
     <input type="text" name="footer" id="footer" />
