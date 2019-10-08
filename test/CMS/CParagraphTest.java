@@ -54,5 +54,9 @@ class CParagraphTest {
        in.close();
 
        System.out.println(response.toString());
+
+        assertEquals(200, responseCode);
+        assertEquals("http://localhost:8080/cpage", url);
+
    }
 }
